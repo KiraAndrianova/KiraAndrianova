@@ -16,9 +16,9 @@ public class HomePageNegativeTest extends BaseTest {
     public SoftAssertions softAssertions = new SoftAssertions();
 
     @Test
-    @Description(value = "Home Page checks")
+    @Description(value = "Home Page negative checks")
     @Epic("Home page elements check")
-    public void homePageTest() {
+    public void homePageNegativeTest() {
 
         HomePage homePage = PageFactory
                 .initElements(webDriver, HomePage.class);
