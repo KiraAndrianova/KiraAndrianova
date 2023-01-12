@@ -23,7 +23,7 @@ public class HomePageTest extends BaseTest {
         HomePage homePage = PageFactory
                 .initElements(webDriver, HomePage.class);
 
-        List<String> expectedHeaderMenu = asList("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
+        List<String> expectedHeaderMenu = asList("home", "CONTACT FORM", "SERVICE", "METALS & COLORS");
 
         softAssertions.assertThat(homePage.getHeader())
                 .containsExactlyElementsOf(expectedHeaderMenu);

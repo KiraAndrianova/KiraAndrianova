@@ -34,4 +34,5 @@ public class LoginTest extends BaseTest {
 
         softAssertions.assertAll();
     }
+
 }
