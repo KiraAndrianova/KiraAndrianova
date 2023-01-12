@@ -9,6 +9,7 @@
             <class name="com.epam.tc.hw4.BaseTest"/>
             <class name="com.epam.tc.hw4.DifferentElementsTest"/>
             <class name="com.epam.tc.hw4.HomePageTest"/>
+            <class name="com.epam.tc.hw4.HomePageNegativeTest"/>
             <class name="com.epam.tc.hw4.LeftMenuTest"/>
             <class name="com.epam.tc.hw4.LoginTest"/>
         </classes>
