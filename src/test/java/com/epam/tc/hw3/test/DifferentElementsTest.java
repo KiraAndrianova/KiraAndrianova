@@ -26,7 +26,8 @@ public class DifferentElementsTest extends BaseTest {
         differentElementsPage.openDifferentElementsPage();
 
         WebDriverActions webDriverActions = new WebDriverActions(webDriver);
-        webDriverActions.WaitUntilCondition(ExpectedConditions.elementToBeClickable(differentElementsPage.getMainContent()));
+        webDriverActions.waitUntilCondition(ExpectedConditions.elementToBeClickable(differentElementsPage
+                .getMainContent()));
 
         webDriverActions.switchToOpenedWindow(webDriver);
 

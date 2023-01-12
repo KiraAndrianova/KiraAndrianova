@@ -1,8 +1,6 @@
 package com.epam.tc.hw3.differentelementspage;
 
 import java.util.List;
-
-import com.epam.tc.hw3.driverutils.WebDriverActions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
