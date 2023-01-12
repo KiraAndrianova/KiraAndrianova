@@ -1,5 +1,7 @@
 package com.epam.tc.hw4;
 
+import static java.util.Arrays.asList;
+
 import com.epam.tc.hw4.homepage.HomePage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -8,8 +10,6 @@ import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
-import static java.util.Arrays.asList;
 
 public class HomePageTest extends BaseTest {
 
