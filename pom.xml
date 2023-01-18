@@ -66,6 +66,12 @@
             <artifactId>cucumber-java</artifactId>
             <version>7.11.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.23.1</version>
+            <scope>compile</scope>
+        </dependency>
 
     </dependencies>
 
@@ -157,13 +163,20 @@
         </profile>
         <profile>
             <id>hw4profile</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <suite.xml.file>allureTest.xml</suite.xml.file>
             </properties>
         </profile>
+        <profile>
+            <id>testng.xml</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml.file>testng.xml</suite.xml.file>
+            </properties>
+        </profile>
+
     </profiles>
 
 </project>
