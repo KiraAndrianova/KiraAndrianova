@@ -1,14 +1,19 @@
 package com.epam.tc.hw4;
 
+import com.epam.tc.hw4.attachmentutils.AttachmentUtils;
 import com.epam.tc.hw4.differentelementspage.DifferentElementsPage;
 import com.epam.tc.hw4.driverutils.DriverManager;
 import com.epam.tc.hw4.homepage.HomePage;
 import com.epam.tc.hw4.leftmenu.LeftMenuPage;
 import com.epam.tc.hw4.loginpage.LoginPage;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
@@ -34,6 +39,14 @@ public class BaseTest {
                 .initElements(webDriver, HomePage.class);
         leftMenu = PageFactory
                 .initElements(webDriver, LeftMenuPage.class);
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void captureScreenshot(ITestResult result) {
+        if (!result.isSuccess()) {
+            byte[] screenshot = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BYTES);
+            AttachmentUtils.makeScreenshotAttachment("screenshot on failure", screenshot);
+        }
     }
 
     @AfterClass
