@@ -6,7 +6,6 @@
     </listeners>
     <test thread-count="4" name="SuiteAllTests">
         <classes>
-            <class name="com.epam.tc.hw4.BaseTest"/>
             <class name="com.epam.tc.hw4.DifferentElementsTest"/>
             <class name="com.epam.tc.hw4.HomePageTest"/>
             <class name="com.epam.tc.hw4.LeftMenuTest"/>
