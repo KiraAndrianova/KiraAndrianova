@@ -1,5 +1,6 @@
-package com.epam.tc.hw3.differentelementspage;
+package com.epam.tc.hw4.differentelementspage;
 
+import io.qameta.allure.Step;
 import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,6 +38,7 @@ public class DifferentElementsPage {
         return mainContent;
     }
 
+    @Step("Select checkbox {0}")
     public void tickCheckbox(String word) {
         for (WebElement w : checkboxes) {
             if (w.getText().contains(word)) {
@@ -45,12 +47,14 @@ public class DifferentElementsPage {
         }
     }
 
+    @Step("Select radios {0}")
     public void tickRadios(String word) {
         radios.stream().filter(x -> x.getText().contains(word))
                 .findAny()
                 .ifPresent(WebElement::click);
     }
 
+    @Step("Select value {0} in dropdown")
     public void tickDropDownItem(String word) {
         Select dropDown = new Select(dropDownItem);
         dropDown.selectByVisibleText(word);
