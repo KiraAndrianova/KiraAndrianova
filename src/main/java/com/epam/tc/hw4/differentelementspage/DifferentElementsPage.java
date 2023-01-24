@@ -38,7 +38,7 @@ public class DifferentElementsPage {
         return mainContent;
     }
 
-    @Step
+    @Step("Select checkbox {0}")
     public void tickCheckbox(String word) {
         for (WebElement w : checkboxes) {
             if (w.getText().contains(word)) {
@@ -47,14 +47,14 @@ public class DifferentElementsPage {
         }
     }
 
-    @Step
+    @Step("Select radios {0}")
     public void tickRadios(String word) {
         radios.stream().filter(x -> x.getText().contains(word))
                 .findAny()
                 .ifPresent(WebElement::click);
     }
 
-    @Step
+    @Step("Select value {0} in dropdown")
     public void tickDropDownItem(String word) {
         Select dropDown = new Select(dropDownItem);
         dropDown.selectByVisibleText(word);

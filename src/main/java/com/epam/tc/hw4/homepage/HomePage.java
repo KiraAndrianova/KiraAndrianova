@@ -32,6 +32,7 @@ public class HomePage {
         return webElementListImages;
     }
 
+    @Step("Check list texts")
     public List<String> getListTexts() {
         return webElementListTexts.stream().map(WebElement::getText).collect(Collectors.toList());
     }

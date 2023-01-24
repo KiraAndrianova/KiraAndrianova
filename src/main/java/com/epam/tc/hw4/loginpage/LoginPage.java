@@ -21,7 +21,7 @@ public class LoginPage {
     @FindBy(id = "user-name")
     private WebElement userName;
 
-    @Step
+    @Step("Login with user {0} and password {1}")
     public void login(String name, String password) {
         userIcon.click();
         this.user.sendKeys(name);

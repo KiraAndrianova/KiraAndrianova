@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverActions {
 
-    private WebDriverWait webDriverWait;
+    private static WebDriverWait webDriverWait;
 
     public WebDriverActions(WebDriver webDriver) {
         webDriverWait = new WebDriverWait(webDriver, 10);
@@ -19,7 +19,7 @@ public class WebDriverActions {
                 .until(p);
     }
 
-    public void switchToOpenedWindow(WebDriver webDriver) {
+    public static void switchToOpenedWindow(WebDriver webDriver) {
         for (String winHandle : webDriver.getWindowHandles()) {
             webDriver.switchTo().window(winHandle);
         }
