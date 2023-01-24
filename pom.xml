@@ -169,14 +169,19 @@
         </profile>
         <profile>
             <id>testng.xml</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <suite.xml.file>testng.xml</suite.xml.file>
             </properties>
         </profile>
-
+        <profile>
+            <id>grid</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml.file>grid.xml</suite.xml.file>
+            </properties>
+        </profile>
     </profiles>
 
 </project>
